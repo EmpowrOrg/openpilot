@@ -578,6 +578,14 @@ class CAR(Platforms):
     GENESIS_G70.specs,
     flags=HyundaiFlags.MANDO_RADAR,
   )
+  GENESIS_G70_2026 = HyundaiPlatformConfig(
+    [
+      # TODO: From 3.3T Sport Prestige 2026 Trim, 2.0T is unknown
+      HyundaiCarDocs("Genesis G70 2026", "All", car_parts=CarParts.common([CarHarness.hyundai_l])),
+    ],
+    CarSpecs(mass=1842, wheelbase=2.83, steerRatio=14.84),
+    flags=HyundaiFlags.CHECKSUM_CRC8 | HyundaiFlags.CAMERA_SCC,
+  )
   GENESIS_GV70_1ST_GEN = HyundaiCanFDPlatformConfig(
     [
       # TODO: Hyundai P is likely the correct harness for HDA II for 2.5T (unsupported due to missing ADAS ECU, is that the radar?)
